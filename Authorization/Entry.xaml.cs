@@ -16,16 +16,21 @@ using System.Windows.Shapes;
 namespace Authorization
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для Entry.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Entry : Page
     {
-        public MainWindow()
+        public MainWindow mainWindow;
+
+        public Entry(MainWindow mainWindow)
         {
             InitializeComponent();
+            this.mainWindow = mainWindow;
+        }
 
-            pageFrame.Content = new Entry(this);
-            
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            mainWindow.Content = new Registration(mainWindow);
         }
     }
 }

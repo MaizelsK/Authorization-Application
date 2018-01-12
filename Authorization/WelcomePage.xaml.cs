@@ -16,16 +16,15 @@ using System.Windows.Shapes;
 namespace Authorization
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для WelcomePage.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class WelcomePage : Page
     {
-        public MainWindow()
+        public WelcomePage(MainWindow mainWindow, string welcomeStr)
         {
             InitializeComponent();
 
-            pageFrame.Content = new Entry(this);
-            
+            welcomeText.Text = "Приветствую, " + welcomeStr;
         }
     }
 }
